@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profecional website</title>
+    <style>
+
+        body{
+            background-color: darkgrey;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+                /* Menu bar */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed; /* Fija el menú en la parte superior */
+            width: 100%;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 1000; /* Asegura que el menú esté por encima del contenido */
+        }
+
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .section {
+            height: 500px;
+            text-align: center;
+            margin-top: 80px; /* Añade espacio en la parte superior para que el contenido no quede oculto detrás del menú */
+        }
+        /* header{
+            border: 1px solid black;background-color: black;
+            padding: 20px;
+        } */
+        /* #inicio{
+            background-image: url("");
+        } */
+        
+         /* About Me part */
+        .About_mePhoto{
+            height: 200px;
+            width: auto;
+        }
+        
+        /* Contct Me part */
+        .Contact_me{
+            animation: changeBackgroundColor 5s infinite;
+            border: 2px solid black;
+            padding: 5px;
+            float: left;
+            width: 31.3%;
+            
+        }
+
+        @keyframes changeBackgroundColor {
+            0% {
+                background-color: rgb(63, 63, 63);
+                /* border-radius: 0%; */
+            }
+            10% {
+                background-color: rgb(255, 0, 0);
+                /* border-radius: 10%; */
+            }
+            20% {
+                background-color: rgb(255, 60, 0);
+                /* border-radius: 20%; */
+            }
+            30% {
+                background-color: rgb(255, 123, 0);
+                /* border-radius: 30%; */
+            }
+            40% {
+                background-color: rgb(255, 187, 0);
+                /* border-radius: 20%; */
+            }
+            50% {
+                background-color: rgb(217, 255, 0);
+                /* border-radius: 10%; */
+            }
+            50% {
+                background-color: rgb(157, 255, 0);
+                /* border-radius: 0%; */
+            }
+            60% {
+                background-color: rgb(9, 255, 0);
+                /* border-radius: 10%; */
+            }
+            70% {
+                background-color: rgb(0, 255, 128);
+                /* border-radius: 20%; */
+            }
+            80% {
+                background-color: rgb(0, 238, 255);
+                /* border-radius: 10%; */
+            }
+            90% {
+                background-color: rgb(0, 140, 255);
+                /* border-radius: 0%; */
+            }
+            100% {
+                background-color: rgb(0, 0, 255);
+                /* border-radius: 20%; */
+            }
+        }
+
+        .PerfilP{
+            /* margin-left: 20px; */
+            max-width: 500px;
+            width: auto;
+            height: auto;
+            padding-left: 30px;
+            border-radius: 20%;
+            animation: appearRotate 4s forwards;
+        }
+        @keyframes appearRotate {
+            0% {
+                opacity: 0;
+                transform: rotateY(0deg);
+            }
+            50% {
+                opacity: 0.5;
+                transform: rotateY(180deg);
+            }
+            100% {
+                opacity: 1;
+                transform: rotateY(360deg);
+            }
+        }
+        .Contact_Inf{
+            min-width: 30%;
+            max-width: 100%;
+            margin-left: 32%;
+            border: 2px solid black;
+            background-color: white;
+        
+        }
+        .contact_me_section{
+            margin-left: 50px;
+        }
+        .contactme_Address{
+            float: left;
+            margin-right: 30px;
+        }
+        .My_Email{
+            float: left;
+            margin-right: 30px;
+        }
+        .My_phoneNumber{
+            float: left;
+            margin-right: 30px;
+        }
+        .sendmesage{
+            clear: left;
+        }
+    </style>
+</head>
+<script>
+    // Script para animar el desplazamiento suave al hacer clic en los enlaces
+    document.addEventListener("DOMContentLoaded", function() {
+      const links = document.querySelectorAll(".navbar a");
+  
+      for (const link of links) {
+        link.addEventListener("click", clickHandler);
+      }
+  
+      function clickHandler(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+        const offsetTop = document.querySelector(href).offsetTop;
+  
+        scroll({
+          top: offsetTop,
+          behavior: "smooth"
+        });
+      }
+    });
+  </script>
+<body>
+    <div class="navbar">
+        <a href="#inicio">Inicio</a>
+        <a href="#acerca-de">Acerca de</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+
+    <!-- introduction part -->
+    <div class="section" id="inicio" style="padding-top: 40px;">
+        <br>
+        <h1>Welcome to my Profecional website</h1>
+    </div>
+
+    <!-- About me section -->
+    <div class="section" id="acerca-de" style="padding-top: 40px;">
+        <br>
+        <h1>About me</h1>
+        <img src="https://yt3.googleusercontent.com/ytc/AOPolaTxE2BjTxit_QfD_X7QbaZsQh6H-DfgJ3YNCG9L=s900-c-k-c0x00ffffff-no-rj" alt="Perfil" class="About_mePhoto">
+        <div>
+            <p>As a programmer, I am highly specialized in web development and application creation. My experience and skills in these areas allow me to approach projects with confidence and efficiency. I have great adaptability when working in any group, which allows me to collaborate effectively with different teams and provide solid solutions in varied work environments. My knowledge in programming languages ​​is solid, standing out in Python, JavaScript, HTML and CSS. These languages ​​are part of my essential toolkit for web development and creating engaging and interactive applications. Thanks to my deep understanding of these technologies, I can implement complex functionality and sophisticated designs with ease. Throughout my career, I have participated in various projects that have strengthened my experience and skills. From website and app development to implementing custom solutions for clients, I have demonstrated a methodical approach and ability to solve problems creatively and efficiently. In addition to my technical background, I also have effective communication skills, which allow me to understand customer needs and translate them into appropriate technological solutions. My client-focused approach and ability to work as a team make me a valuable contributor to any project. In short, I am a highly specialized programmer, with wide adaptability and strong knowledge of Python, JavaScript, HTML and CSS. My passion for web development and application creation drives my desire to face new challenges and keep improving my skills in the world of programming.</p>
+        </div>
+    </div>
+
+    <!-- Services part -->
+    <div class="section" id="servicios" style="padding-top: 40px;">
+        <h1>Servicies</h1>
+    </div>
+
+    <div class="section" id="contacto" style="padding-top: 40px;">
+        <div class="Contact_me">
+            <div>
+                <img class="PerfilP" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUM3Y4jJpzbdfMUvwQGtI_eQCoaNo5TLiNN7UgLhw80-j0NPho0MgA4S0MtbtLm6smkQ&usqp=CAU" alt="Perfil Photo" title="pollo facha">
+            </div>
+        </div>
+        <div class="Contact_Inf">
+            <div class="contact_me_section">
+                <div>
+                    <h1>Contact Me</h1>
+                    <p>How to contact me</p>
+                </div>
+                <div class="contactme_Address">
+                    <h3> My address:</h3>
+                    <p>Mi adress</p>
+                </div>
+                <div class="My_Email">
+                    <h3> My Email:</h3>
+                    <p>serpiente2085@gmail.com</p>
+                </div>
+                <div class="My_phoneNumber">
+                    <h3> My phone number:</h3>
+                    <p>+1 480 781 8972</p>
+                </div>
+
+                <div class="sendmesage">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                    <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Create a message here"></textarea>
+                    <input type="submit" value="Send Message" class="btn_Sumit">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    </script>
+</body>
+</html>

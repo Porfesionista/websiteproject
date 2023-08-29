@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  #text-container {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+  <div id="text-container">
+    <!-- El contenido de texto aparecerá aquí -->
+  </div>
+
+  <script>
+    const textContainer = document.getElementById('text-container');
+    const text = "Este es un ejemplo de texto que aparece letra por letra lentamente.";
+    const delay = 50; // Milisegundos entre cada letra
+
+    let index = 0;
+    function appendLetter() {
+      if (index < text.length) {
+        textContainer.textContent += text.charAt(index);
+        index++;
+        setTimeout(appendLetter, delay);
+      }
+    }
+
+    appendLetter();
+  </script>
+</body>
+</html>
