@@ -7,7 +7,7 @@
     <style>
 
         body{
-            background-color: darkgrey;
+            background-color: rgb(231, 236, 239);
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -51,11 +51,52 @@
         } */
         
          /* About Me part */
-        .About_mePhoto{
-            height: 200px;
-            width: auto;
+         #text-container {
+            display: none;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            float: right;
+            max-width: 60%;
         }
-        
+
+        #toggle-button {
+            margin-top: 20px;
+            padding: 8px 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .About_mePhoto {
+            padding-left: 200px;
+            display: none;
+            height: 300px;
+            width: auto;
+            animation: appearRotate 4s forwards;
+        }
+
+        @keyframes appearRotate {
+            0% {
+            opacity: 0;
+            transform: rotateY(0deg);
+            }
+            50% {
+            opacity: 0.5;
+            transform: rotateY(180deg);
+            }
+            70% {
+            opacity: 1;
+            transform: rotate(0deg);
+            }
+            100% {
+            opacity: 1;
+            transform: rotateY(360deg);
+            }
+        }
+
+
         /* Contct Me part */
         .Contact_me{
             animation: changeBackgroundColor 5s infinite;
@@ -63,9 +104,7 @@
             padding: 5px;
             float: left;
             width: 31.3%;
-            
         }
-
         @keyframes changeBackgroundColor {
             0% {
                 background-color: rgb(63, 63, 63);
@@ -116,7 +155,6 @@
                 /* border-radius: 20%; */
             }
         }
-
         .PerfilP{
             /* margin-left: 20px; */
             max-width: 500px;
@@ -167,6 +205,46 @@
             clear: left;
         }
     </style>
+
+    <!-- Services part -->
+    <style>
+        .Web_S_D{
+            border: solid black 2px;
+            background-color:gold ;
+            /* width: 200px; */
+            margin-left: 20px;
+            height: 200px;
+            float: left;
+        }
+        .GD{
+            border: solid black 2px;
+            background-color:gold ;
+            /* width: 200px; */
+            margin-left: 20px;
+            height: 200px;
+            float: left;
+        }
+        .MOvile_AP_D{
+            border: solid black 2px;
+            background-color:gold ;
+            /* width: 200px; */
+            margin-left: 20px;
+            height: 200px;
+            float: left;
+        }
+        .Web_S_D:hover{
+            background-color: rgb(188, 57, 8);
+            color: white;
+        }
+        .GD:hover{
+            background-color: rgb(188, 57, 8);
+            color: white;
+        }
+        .MOvile_AP_D:hover{
+            background-color: rgb(188, 57, 8);
+            color: white;
+        }
+    </style>
 </head>
 <script>
     // Script para animar el desplazamiento suave al hacer clic en los enlaces
@@ -191,31 +269,47 @@
   </script>
 <body>
     <div class="navbar">
-        <a href="#inicio">Inicio</a>
-        <a href="#acerca-de">Acerca de</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#inicio">Home</a>
+        <a href="#acerca-de">About me</a>
+        <a href="#servicios">Services</a>
+        <a href="#contacto">Contact</a>
     </div>
 
     <!-- introduction part -->
     <div class="section" id="inicio" style="padding-top: 40px;">
         <br>
-        <h1>Welcome to my Profecional website</h1>
+        <h1 style="font-size: 60px;">Welcome to my Profecional website</h1>
     </div>
 
     <!-- About me section -->
     <div class="section" id="acerca-de" style="padding-top: 40px;">
         <br>
-        <h1>About me</h1>
-        <img src="https://yt3.googleusercontent.com/ytc/AOPolaTxE2BjTxit_QfD_X7QbaZsQh6H-DfgJ3YNCG9L=s900-c-k-c0x00ffffff-no-rj" alt="Perfil" class="About_mePhoto">
-        <div>
-            <p>As a programmer, I am highly specialized in web development and application creation. My experience and skills in these areas allow me to approach projects with confidence and efficiency. I have great adaptability when working in any group, which allows me to collaborate effectively with different teams and provide solid solutions in varied work environments. My knowledge in programming languages ​​is solid, standing out in Python, JavaScript, HTML and CSS. These languages ​​are part of my essential toolkit for web development and creating engaging and interactive applications. Thanks to my deep understanding of these technologies, I can implement complex functionality and sophisticated designs with ease. Throughout my career, I have participated in various projects that have strengthened my experience and skills. From website and app development to implementing custom solutions for clients, I have demonstrated a methodical approach and ability to solve problems creatively and efficiently. In addition to my technical background, I also have effective communication skills, which allow me to understand customer needs and translate them into appropriate technological solutions. My client-focused approach and ability to work as a team make me a valuable contributor to any project. In short, I am a highly specialized programmer, with wide adaptability and strong knowledge of Python, JavaScript, HTML and CSS. My passion for web development and application creation drives my desire to face new challenges and keep improving my skills in the world of programming.</p>
+        <h1 style="font-size: 60px;">About me</h1>
+        <div id="text-container">
+            <!-- text that apear -->
         </div>
+        <img src="https://yt3.googleusercontent.com/ytc/AOPolaTxE2BjTxit_QfD_X7QbaZsQh6H-DfgJ3YNCG9L=s900-c-k-c0x00ffffff-no-rj" alt="Perfil" class="About_mePhoto">
+        <button id="toggle-button">Display Info</button>
+
     </div>
 
     <!-- Services part -->
     <div class="section" id="servicios" style="padding-top: 40px;">
-        <h1>Servicies</h1>
+        <h1 style="font-size: 60px;">Servicies</h1>
+        <div class="Web_S_D">
+            <div>
+                <h2>Web development</h2>
+                <p>I am specialized in web development</p>
+            </div>
+        </div>
+        <div class="GD">
+            <h2>Graphic Design</h2>
+            <p>I am specialized in Graphic Design</p>
+        </div>
+        <div class="MOvile_AP_D">
+            <h2>Mobile App Design</h2>
+            <p>I am specialized in Movil App Disaing</p>
+        </div>
     </div>
 
     <div class="section" id="contacto" style="padding-top: 40px;">
@@ -224,7 +318,7 @@
                 <img class="PerfilP" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUM3Y4jJpzbdfMUvwQGtI_eQCoaNo5TLiNN7UgLhw80-j0NPho0MgA4S0MtbtLm6smkQ&usqp=CAU" alt="Perfil Photo" title="pollo facha">
             </div>
         </div>
-        <div class="Contact_Inf">
+        <div class="Contact_Inf"> 
             <div class="contact_me_section">
                 <div>
                     <h1>Contact Me</h1>
@@ -254,6 +348,37 @@
         </div>
     </div>
     <script>
+        // Código JavaScript
+        const button = document.getElementById('toggle-button');
+        const textContainer = document.getElementById('text-container');
+        const text = "As a programmer, I am highly specialized in web development and application creation. My experience and skills in these areas allow me to approach projects with confidence and efficiency. I have great adaptability when working in any group, which allows me to collaborate effectively with different teams and provide solid solutions in varied work environments. My knowledge in programming languages ​​is solid, standing out in Python, JavaScript, HTML and CSS. These languages ​​are part of my essential toolkit for web development and creating engaging and interactive applications. Thanks to my deep understanding of these technologies, I can implement complex functionality and sophisticated designs with ease. Throughout my career, I have participated in various projects that have strengthened my experience and skills. From website and app development to implementing custom solutions for clients, I have demonstrated a methodical approach and ability to solve problems creatively and efficiently. In addition to my technical background, I also have effective communication skills, which allow me to understand customer needs and translate them into appropriate technological solutions. My client-focused approach and ability to work as a team make me a valuable contributor to any project. In short, I am a highly specialized programmer, with wide adaptability and strong knowledge of Python, JavaScript, HTML and CSS. My passion for web development and application creation drives my desire to face new challenges and keep improving my skills in the world of programming.";
+        const delay = 20; // Milisegundos entre cada letra
+        
+        let index = 0;
+        function appendLetter() {
+          if (index < text.length) {
+            textContainer.textContent += text.charAt(index);
+            index++;
+            setTimeout(appendLetter, delay);
+          }
+        }
+        
+        appendLetter();
+    
+        const photo = document.querySelector('.About_mePhoto');
+        let isContentVisible = false;
+    
+        button.addEventListener('click', () => {
+          if (isContentVisible) {
+            textContainer.style.display = 'none';
+            photo.style.display = 'none';
+          } else {
+            textContainer.style.display = 'block';
+            photo.style.display = 'block';
+          }
+          
+          isContentVisible = !isContentVisible;
+        });
     </script>
 </body>
 </html>
