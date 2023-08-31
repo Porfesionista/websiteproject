@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profecional website</title>
     <style>
-
+        /* Global styling */
         body{
-            background-color: rgb(231, 236, 239);
+            background-color:rgb(173, 232, 244);
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            height: auto;
         }
-                /* Menu bar */
+        /* Nab bar section */
         .navbar {
-            background-color: #333;
+            background-color:rgb(37, 9, 2);
             overflow: hidden;
-            position: fixed; /* Fija el menú en la parte superior */
+            position: fixed;
             width: 100%;
             top: 0;
             display: flex;
             justify-content: center;
-            z-index: 1000; /* Asegura que el menú esté por encima del contenido */
+            z-index: 1000;
         }
-
         .navbar a {
             display: block;
             color: white;
@@ -31,33 +31,26 @@
             padding: 14px 16px;
             text-decoration: none;
         }
-
         .navbar a:hover {
             background-color: #ddd;
             color: black;
         }
-
+        /* Mouse over nav bar */
         .section {
             height: 500px;
             text-align: center;
-            margin-top: 80px; /* Añade espacio en la parte superior para que el contenido no quede oculto detrás del menú */
+            margin-top: 80px;
         }
-        /* header{
-            border: 1px solid black;background-color: black;
-            padding: 20px;
-        } */
-        /* #inicio{
-            background-image: url("");
-        } */
-        
-         /* About Me part */
-         #text-container {
+
+        /* About Me part */
+        #text-container {
             display: none;
             font-size: 16px;
             font-family: Arial, sans-serif;
             line-height: 1.5;
             float: right;
             max-width: 60%;
+            margin-right:40px ;
         }
 
         #toggle-button {
@@ -96,65 +89,16 @@
             }
         }
 
-
-        /* Contct Me part */
+        /* Contact me Part */
         .Contact_me{
-            animation: changeBackgroundColor 5s infinite;
+            background-color: rgb(3, 4, 94);
             border: 2px solid black;
             padding: 5px;
             float: left;
             width: 31.3%;
+            bottom: 100%;
         }
-        @keyframes changeBackgroundColor {
-            0% {
-                background-color: rgb(63, 63, 63);
-                /* border-radius: 0%; */
-            }
-            10% {
-                background-color: rgb(255, 0, 0);
-                /* border-radius: 10%; */
-            }
-            20% {
-                background-color: rgb(255, 60, 0);
-                /* border-radius: 20%; */
-            }
-            30% {
-                background-color: rgb(255, 123, 0);
-                /* border-radius: 30%; */
-            }
-            40% {
-                background-color: rgb(255, 187, 0);
-                /* border-radius: 20%; */
-            }
-            50% {
-                background-color: rgb(217, 255, 0);
-                /* border-radius: 10%; */
-            }
-            50% {
-                background-color: rgb(157, 255, 0);
-                /* border-radius: 0%; */
-            }
-            60% {
-                background-color: rgb(9, 255, 0);
-                /* border-radius: 10%; */
-            }
-            70% {
-                background-color: rgb(0, 255, 128);
-                /* border-radius: 20%; */
-            }
-            80% {
-                background-color: rgb(0, 238, 255);
-                /* border-radius: 10%; */
-            }
-            90% {
-                background-color: rgb(0, 140, 255);
-                /* border-radius: 0%; */
-            }
-            100% {
-                background-color: rgb(0, 0, 255);
-                /* border-radius: 20%; */
-            }
-        }
+
         .PerfilP{
             /* margin-left: 20px; */
             max-width: 500px;
@@ -183,8 +127,7 @@
             max-width: 100%;
             margin-left: 32%;
             border: 2px solid black;
-            background-color: white;
-        
+            background-color: white;      
         }
         .contact_me_section{
             margin-left: 50px;
@@ -204,22 +147,21 @@
         .sendmesage{
             clear: left;
         }
+
     </style>
 
-    <!-- Services part -->
+    <!-- Service part -->
     <style>
         .Web_S_D{
             border: solid black 2px;
             background-color:gold ;
-            /* width: 200px; */
-            margin-left: 20px;
+            margin-left: 28%;
             height: 200px;
             float: left;
         }
         .GD{
             border: solid black 2px;
             background-color:gold ;
-            /* width: 200px; */
             margin-left: 20px;
             height: 200px;
             float: left;
@@ -227,7 +169,6 @@
         .MOvile_AP_D{
             border: solid black 2px;
             background-color:gold ;
-            /* width: 200px; */
             margin-left: 20px;
             height: 200px;
             float: left;
@@ -245,9 +186,43 @@
             color: white;
         }
     </style>
+    
+    <!-- images part -->
+    <style>
+        .HtmlP{
+            width: 200px;
+            height: auto;
+        }
+        .JavaScriptL{
+            width: 350px;
+            height: auto;
+        }
+        .CSSL{
+            width: 140px;
+            height: auto;
+        }
+    </style>
+     <!-- New Contact me part  -->
+    <style>
+        .New_ContactME{
+            border: 3px solid black; background-color: rgb(3, 4, 94);
+            height: 400px;
+
+        }
+        .New_PerfilP{
+            margin-top: 20px;
+            margin-left: 100px;
+            float: left;
+        }
+        .New_ContactPart{
+            border: black solid 3px;
+            margin-left: 33%;
+            height: 397px;
+        }
+    </style>
 </head>
 <script>
-    // Script to animate smooth scrolling when clicking links
+     // JavaScript for smooth scrolling
     document.addEventListener("DOMContentLoaded", function() {
       const links = document.querySelectorAll(".navbar a");
   
@@ -268,6 +243,8 @@
     });
   </script>
 <body>
+
+    <!-- Navigation bar -->
     <div class="navbar">
         <a href="#inicio">Home</a>
         <a href="#acerca-de">About me</a>
@@ -275,26 +252,37 @@
         <a href="#contacto">Contact</a>
     </div>
 
-    <!-- introduction part -->
+    <!-- Introduction section -->
     <div class="section" id="inicio" style="padding-top: 40px;">
         <br>
         <h1 style="font-size: 60px;">Welcome to my Profecional website</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo5Y3KJ5kLB335eG_wZGDGiyGE8CNyIexxVnwIbRuZOw&s" alt="Perfil photo">
     </div>
 
     <!-- About me section -->
-    <div class="section" id="acerca-de" style="padding-top: 40px;">
+    <div class="section" id="acerca-de" style="padding-top: 40px; margin-bottom: 200px;">
         <br>
         <h1 style="font-size: 60px;">About me</h1>
+
+        <!-- Imges of Code Lenguages -->
+        <div class="Especialisado">
+            <p style="font-size: 30px;">I am specialized in HTML, JavaScript and CSS</p>
+            <div>
+                <img class="HtmlP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/800px-HTML5_logo_and_wordmark.svg.png" alt="Html Image" title="HTML">
+                <img class="JavaScriptL" src="https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Symbol.png" alt="JavaScript logo" title="JavaScript">
+                <img class="CSSL" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="CSS Logo" title="CSS">
+            </div>
+        </div>
+
         <div id="text-container">
-            <!-- text that apear -->
+            <!-- part where the text apear -->
         </div>
         <img src="https://yt3.googleusercontent.com/ytc/AOPolaTxE2BjTxit_QfD_X7QbaZsQh6H-DfgJ3YNCG9L=s900-c-k-c0x00ffffff-no-rj" alt="Perfil" class="About_mePhoto">
         <button id="toggle-button">Display Info</button>
-
     </div>
 
-    <!-- Services part -->
-    <div class="section" id="servicios" style="padding-top: 40px;">
+    <!-- Services section -->
+    <div class="section" id="servicios" style="padding-top: 200px;">
         <h1 style="font-size: 60px;">Servicies</h1>
         <div class="Web_S_D">
             <div>
@@ -312,7 +300,8 @@
         </div>
     </div>
 
-    <div class="section" id="contacto" style="padding-top: 40px;">
+    <!-- Contact section -->
+    <div class="section" id="contacto" class="Contacto_me_Informcaion" style="padding-top: 40px;">
         <div class="Contact_me">
             <div>
                 <img class="PerfilP" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcUM3Y4jJpzbdfMUvwQGtI_eQCoaNo5TLiNN7UgLhw80-j0NPho0MgA4S0MtbtLm6smkQ&usqp=CAU" alt="Perfil Photo" title="pollo facha">
@@ -347,12 +336,22 @@
             </div>
         </div>
     </div>
+
+    <h1>Contact Me</h1>
+    <div class="New_ContactME">
+        <img class="New_PerfilP" src="#" alt="Perfil Photo" title="Pollo facha">
+
+        <div class="New_ContactPart">
+
+        </div>
+    </div>
+    
     <script>
-        // Código JavaScript
+        // JavaScript for text display and image toggle
         const button = document.getElementById('toggle-button');
         const textContainer = document.getElementById('text-container');
-        const text = "As a programmer, I am highly specialized in web development and application creation. My experience and skills in these areas allow me to approach projects with confidence and efficiency. I have great adaptability when working in any group, which allows me to collaborate effectively with different teams and provide solid solutions in varied work environments. My knowledge in programming languages ​​is solid, standing out in Python, JavaScript, HTML and CSS. These languages ​​are part of my essential toolkit for web development and creating engaging and interactive applications. Thanks to my deep understanding of these technologies, I can implement complex functionality and sophisticated designs with ease. Throughout my career, I have participated in various projects that have strengthened my experience and skills. From website and app development to implementing custom solutions for clients, I have demonstrated a methodical approach and ability to solve problems creatively and efficiently. In addition to my technical background, I also have effective communication skills, which allow me to understand customer needs and translate them into appropriate technological solutions. My client-focused approach and ability to work as a team make me a valuable contributor to any project. In short, I am a highly specialized programmer, with wide adaptability and strong knowledge of Python, JavaScript, HTML and CSS. My passion for web development and application creation drives my desire to face new challenges and keep improving my skills in the world of programming.";
-        const delay = 20; // Milisegundos entre cada letra
+        const text = "I'm a web developer specialized in Movil app disign and Web disign. With expertise in Python, JavaScript, HTML, and CSS, I confidently handle diverse projects. My deep understanding of these languages enables me to implement complex functionalities and sleek designs. I've built a strong portfolio through various projects, showcasing my methodical problem-solving skills. I excel not only in technical aspects but also in effective communication, translating client needs into tech solutions. My client-centered approach and teamwork make me a valuable asset. In essence, I'm a adaptable programmer driven by a passion for continuous growth in the programming world.";
+        const delay = 20; // milliseconds between each letter
         
         let index = 0;
         function appendLetter() {
